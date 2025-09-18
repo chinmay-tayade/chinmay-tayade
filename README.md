@@ -2,7 +2,7 @@
 <h3 align="center">Android Developer | Kotlin Enthusiast | Clean Architecture Advocate</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=chinmay-tayade&label=Profile%20views&color=0e75b6&style=flat" alt="chinmay-tayade" /> </p>
----
+
 ## 💫 About Me:
 - 🔭 I’m currently working on: Building secure, scalable mobile fintech solutions at **Bachatt**, enabling daily savings for India’s self-employed.  
 - 🔧 I love building clean and maintainable apps using **MVVM**, **Kotlin**, and **Clean Architecture**.
