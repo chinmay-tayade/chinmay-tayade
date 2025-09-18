@@ -1,26 +1,25 @@
-name: Generate Datas
+name: Generate Snake
 
 on:
-  schedule: # execute every 12 hours
+  schedule: # every 12 hours
     - cron: "0 */12 * * *"
   workflow_dispatch:
 
 jobs:
   build:
-    name: Generate snake animation
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # allow pushing to output branch
+      contents: write
 
     steps:
-      # Snake Animation
-      - name: Generate Snake SVG
+      - name: Generate Snake (Light + Dark)
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: chinmay-tayade
-          outputs: dist/snake.svg
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
