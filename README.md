@@ -1,6 +1,7 @@
 <h1 align="center">Hi 👋, I'm Chinmay Shravanbal Tayade</h1>
 <h3 align="center">Android Developer | Kotlin Enthusiast | Clean Architecture Advocate</h3>
 
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=chinmay-tayade&label=Profile%20views&color=0e75b6&style=flat" alt="chinmay-tayade" /> </p>
 ---
 ## 💫 About Me:
 - 🔭 I’m currently working on: Building secure, scalable mobile fintech solutions at **Bachatt**, enabling daily savings for India’s self-employed.  
@@ -76,7 +77,7 @@
 
 ---
 
-# 📊 GitHub Stats:
+## 📊 GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=chinmay-tayade&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=chinmay-tayade&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=chinmay-tayade&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
