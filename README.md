@@ -75,8 +75,8 @@ stateDiagram-v2
   that went offline in an outage doesn't stampede the server when it returns.
 - **Conflict resolution is per operation type**, not one global rule.
 
-Built out in **[argent-android](https://github.com/chinmay-tayade/argent-android)**,
-then extracted into a standalone `offline-sync-engine`.
+The engine lives in **[offline-sync-engine](https://github.com/chinmay-tayade/offline-sync-engine)**
+(9 tests, standalone); it gets wired into **[argent-android](https://github.com/chinmay-tayade/argent-android)** behind WorkManager.
 
 </details>
 
@@ -119,7 +119,7 @@ Kotlin/Native. **Native:** all UI, navigation, charts, notifications, biometric
 prompts — the things users actually feel. The decision, module by module, is
 written up in `SHARING.md`.
 
-Built in **basis-kmp** *(next up)*.
+Built in **[basis-kmp](https://github.com/chinmay-tayade/basis-kmp)** — shared domain + `SHARING.md` done, Android app runs, iOS framework links.
 
 </details>
 
@@ -146,26 +146,26 @@ The offline transfer state machine is next.
 </td>
 <td width="33.33%" valign="top">
 
-**🧩 &nbsp;basis&#8209;kmp**
+**🧩 &nbsp;[basis&#8209;kmp](https://github.com/chinmay-tayade/basis-kmp)**
 
 <sub>*Shared Kotlin core · Android + iOS*</sub>
 
 One financial core — portfolio valuation, cost basis, allocation — shared via
-Ktor / SQLDelight / Koin, with fully native Compose and SwiftUI UIs. Ships
-`SHARING.md`: the module&#8209;by&#8209;module share&#8209;vs&#8209;native call.
+Koin, with fully native Compose and SwiftUI UIs. Shared domain + tests done,
+Android app runs, iOS framework links. Ships **`SHARING.md`**: the
+module&#8209;by&#8209;module share&#8209;vs&#8209;native call.
 
-<kbd>kmp</kbd> <kbd>compose</kbd> <kbd>swiftui</kbd> <kbd>ktor</kbd> <kbd>sqldelight</kbd>
+<kbd>kmp</kbd> <kbd>compose</kbd> <kbd>swiftui</kbd> <kbd>koin</kbd> <kbd>ios</kbd>
 
 </td>
 <td width="33.33%" valign="top">
 
-**📒 &nbsp;ledger&#8209;core**
+**📒 &nbsp;[ledger&#8209;core](https://github.com/chinmay-tayade/ledger-core)**
 
 <sub>*Double&#8209;entry ledger · KMP library*</sub>
 
-Pure Kotlin: accounts, postings, immutable idempotent transactions, a `Money`
-type with correct rounding and currency safety. The fintech fundamentals,
-heavily tested.
+Pure Kotlin: balanced journal entries, idempotent postings, a `Money` type
+with currency safety. The fintech fundamentals — 12 tests, JVM + iOS, green CI.
 
 <kbd>kmp</kbd> <kbd>fintech</kbd> <kbd>ledger</kbd> <kbd>library</kbd>
 
@@ -179,20 +179,20 @@ heavily tested.
 <tr>
 <td width="50%" valign="top">
 
-**💳 &nbsp;pay&#8209;sheet** &nbsp;<sub>*checkout / payment&#8209;sheet module*</sub>
+**💳 &nbsp;[pay&#8209;sheet](https://github.com/chinmay-tayade/pay-sheet)** &nbsp;<sub>*checkout / payment&#8209;sheet module*</sub>
 
-Card input with Luhn + network detection, tokenization, 3&#8209;D&#8209;Secure&#8209;style
-step&#8209;up, PCI&#8209;conscious notes.
+Card input with Luhn + brand detection, tokenization, a 3&#8209;D&#8209;Secure&#8209;style
+step&#8209;up state machine, PCI&#8209;conscious notes. 11 tests, sample app.
 
 <kbd>android</kbd> <kbd>compose</kbd> <kbd>payments</kbd> <kbd>3ds</kbd>
 
 </td>
 <td width="50%" valign="top">
 
-**🔄 &nbsp;offline&#8209;sync&#8209;engine** &nbsp;<sub>*standalone sync library*</sub>
+**🔄 &nbsp;[offline&#8209;sync&#8209;engine](https://github.com/chinmay-tayade/offline-sync-engine)** &nbsp;<sub>*standalone sync library*</sub>
 
-The sync core from argent&#8209;android, Maven&#8209;published: operation queue,
-exponential backoff + jitter, pluggable conflict strategies.
+Durable operation queue, exponential backoff + full jitter, pluggable
+per&#8209;operation conflict strategies. 9 tests, green CI.
 
 <kbd>offline&#8209;first</kbd> <kbd>workmanager</kbd> <kbd>library</kbd>
 
@@ -201,20 +201,21 @@ exponential backoff + jitter, pluggable conflict strategies.
 <tr>
 <td width="50%" valign="top">
 
-**🏗️ &nbsp;modulith** &nbsp;<sub>*Android architecture template*</sub>
+**🏗️ &nbsp;[modulith](https://github.com/chinmay-tayade/modulith)** &nbsp;<sub>*Android architecture template*</sub>
 
-Gradle convention plugins + a CI check that fails builds on module&#8209;graph
-violations, shown with a non&#8209;trivial sample app.
+Gradle convention plugins + a `checkModuleGraph` task that fails the build on
+module&#8209;graph violations — verified catching a `core → feature` edge.
 
 <kbd>gradle</kbd> <kbd>convention&#8209;plugins</kbd> <kbd>architecture</kbd>
 
 </td>
 <td width="50%" valign="top">
 
-**⚡ &nbsp;android&#8209;perf&#8209;lab** &nbsp;<sub>*measured performance*</sub>
+**⚡ &nbsp;android&#8209;perf&#8209;lab** &nbsp;<sub>*measured performance — queued*</sub>
 
 Baseline Profiles + Macrobenchmark against argent&#8209;android — real
-before/after, every number with its device and iteration count.
+before/after with device + iteration count. Sequenced after argent has real
+screens worth measuring.
 
 <kbd>performance</kbd> <kbd>baseline&#8209;profiles</kbd> <kbd>macrobenchmark</kbd>
 
