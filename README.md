@@ -127,121 +127,103 @@ Built in **basis-kmp** *(next up)*.
 
 ## &nbsp;Featured work
 
+### &nbsp;&nbsp;Flagships &nbsp;·&nbsp; where most of the effort goes
+
 <table>
 <tr>
-<th align="left" width="210">Repo</th><th align="left">What it demonstrates</th><th align="left" width="90">Status</th>
+<td width="33.33%" valign="top">
+
+**🏦 &nbsp;[argent&#8209;android](https://github.com/chinmay-tayade/argent-android)**
+
+<sub>*Retail digital banking · offline&#8209;first*</sub>
+
+Multi&#8209;module Kotlin/Compose. Foundation shipped — convention plugins, a
+currency&#8209;safe domain layer with tests, Hilt&#8209;wired app, green CI.
+The offline transfer state machine is next.
+
+<kbd>kotlin</kbd> <kbd>compose</kbd> <kbd>multi&#8209;module</kbd> <kbd>offline&#8209;first</kbd> <kbd>fintech</kbd>
+
+</td>
+<td width="33.33%" valign="top">
+
+**🧩 &nbsp;basis&#8209;kmp**
+
+<sub>*Shared Kotlin core · Android + iOS*</sub>
+
+One financial core — portfolio valuation, cost basis, allocation — shared via
+Ktor / SQLDelight / Koin, with fully native Compose and SwiftUI UIs. Ships
+`SHARING.md`: the module&#8209;by&#8209;module share&#8209;vs&#8209;native call.
+
+<kbd>kmp</kbd> <kbd>compose</kbd> <kbd>swiftui</kbd> <kbd>ktor</kbd> <kbd>sqldelight</kbd>
+
+</td>
+<td width="33.33%" valign="top">
+
+**📒 &nbsp;ledger&#8209;core**
+
+<sub>*Double&#8209;entry ledger · KMP library*</sub>
+
+Pure Kotlin: accounts, postings, immutable idempotent transactions, a `Money`
+type with correct rounding and currency safety. The fintech fundamentals,
+heavily tested.
+
+<kbd>kmp</kbd> <kbd>fintech</kbd> <kbd>ledger</kbd> <kbd>library</kbd>
+
+</td>
 </tr>
-
-<tr><td valign="top">
-
-**[argent-android](https://github.com/chinmay-tayade/argent-android)**
-<br/><sub>digital banking</sub>
-
-</td><td valign="top">
-
-Multi-module Kotlin/Compose retail banking app. Foundation shipped —
-convention plugins, a currency-safe domain layer with tests, Hilt-wired app,
-green CI. Building toward the offline transfer state machine, biometric
-Keystore encryption, cert pinning and Baseline Profiles ([roadmap](https://github.com/chinmay-tayade/argent-android/blob/main/ROADMAP.md)).
-
-<sub>`kotlin` `compose` `multi-module` `offline-first` `mvi` `fintech` `mobile-security`</sub>
-
-</td><td valign="top"><br/>🟢 building</td></tr>
-
-<tr><td valign="top">
-
-**basis-kmp**
-<br/><sub>KMP · Android + iOS</sub>
-
-</td><td valign="top">
-
-Shared Kotlin financial core (portfolio valuation, cost basis, allocation) across
-Android and iOS, with fully native Compose and SwiftUI UIs. Ships `SHARING.md` —
-the module-by-module share-vs-native rationale.
-
-<sub>`kotlin-multiplatform` `compose` `swiftui` `ktor` `sqldelight` `koin`</sub>
-
-</td><td valign="top"><br/>⚪ next</td></tr>
-
-<tr><td valign="top">
-
-**ledger-core**
-<br/><sub>KMP library</sub>
-
-</td><td valign="top">
-
-A pure-Kotlin **double-entry ledger**: accounts, postings, immutable transactions,
-idempotency, a `Money` type with correct rounding and currency safety. The fintech
-fundamentals, heavily tested, multiplatform.
-
-<sub>`kotlin-multiplatform` `fintech` `ledger` `double-entry` `library`</sub>
-
-</td><td valign="top"><br/>⚪ planned</td></tr>
-
-<tr><td valign="top">
-
-**pay-sheet**
-<br/><sub>payments module</sub>
-
-</td><td valign="top">
-
-A drop-in Compose **checkout / payment-sheet** module: card input with Luhn +
-network detection, tokenization flow, 3-D-Secure-style step-up, PCI-conscious
-design notes. Small, focused, production-shaped.
-
-<sub>`android` `compose` `payments` `checkout` `3ds`</sub>
-
-</td><td valign="top"><br/>⚪ planned</td></tr>
-
-<tr><td valign="top">
-
-**offline-sync-engine**
-<br/><sub>library</sub>
-
-</td><td valign="top">
-
-The sync core from `argent-android`, standalone and Maven-published: operation
-queue, exponential backoff + jitter, pluggable conflict strategies, connectivity
-observation.
-
-<sub>`android` `offline-first` `sync` `workmanager` `library`</sub>
-
-</td><td valign="top"><br/>⚪ planned</td></tr>
-
-<tr><td valign="top">
-
-**modulith**
-<br/><sub>architecture template</sub>
-
-</td><td valign="top">
-
-Opinionated Android architecture: Gradle convention plugins, a CI check that fails
-builds on module-graph violations, wired-in benchmark + baseline-profile setup,
-demonstrated with a non-trivial sample app.
-
-<sub>`android` `gradle` `convention-plugins` `architecture` `ci`</sub>
-
-</td><td valign="top"><br/>⚪ planned</td></tr>
-
-<tr><td valign="top">
-
-**android-perf-lab**
-<br/><sub>performance</sub>
-
-</td><td valign="top">
-
-Baseline Profiles + Macrobenchmark run against `argent-android`. Real numbers,
-real methodology, real before/after — every measurement carries its device,
-build type and iteration count.
-
-<sub>`android` `performance` `baseline-profiles` `macrobenchmark`</sub>
-
-</td><td valign="top"><br/>⚪ planned</td></tr>
-
 </table>
 
-> Then, one at a time, we build each: scaffold → local `./gradlew build` green →
-> feature commits → tests → CI → README. Honest history, no big-bang dumps.
+### &nbsp;&nbsp;Also building &nbsp;·&nbsp; focused supporting repos
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**💳 &nbsp;pay&#8209;sheet** &nbsp;<sub>*checkout / payment&#8209;sheet module*</sub>
+
+Card input with Luhn + network detection, tokenization, 3&#8209;D&#8209;Secure&#8209;style
+step&#8209;up, PCI&#8209;conscious notes.
+
+<kbd>android</kbd> <kbd>compose</kbd> <kbd>payments</kbd> <kbd>3ds</kbd>
+
+</td>
+<td width="50%" valign="top">
+
+**🔄 &nbsp;offline&#8209;sync&#8209;engine** &nbsp;<sub>*standalone sync library*</sub>
+
+The sync core from argent&#8209;android, Maven&#8209;published: operation queue,
+exponential backoff + jitter, pluggable conflict strategies.
+
+<kbd>offline&#8209;first</kbd> <kbd>workmanager</kbd> <kbd>library</kbd>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**🏗️ &nbsp;modulith** &nbsp;<sub>*Android architecture template*</sub>
+
+Gradle convention plugins + a CI check that fails builds on module&#8209;graph
+violations, shown with a non&#8209;trivial sample app.
+
+<kbd>gradle</kbd> <kbd>convention&#8209;plugins</kbd> <kbd>architecture</kbd>
+
+</td>
+<td width="50%" valign="top">
+
+**⚡ &nbsp;android&#8209;perf&#8209;lab** &nbsp;<sub>*measured performance*</sub>
+
+Baseline Profiles + Macrobenchmark against argent&#8209;android — real
+before/after, every number with its device and iteration count.
+
+<kbd>performance</kbd> <kbd>baseline&#8209;profiles</kbd> <kbd>macrobenchmark</kbd>
+
+</td>
+</tr>
+</table>
+
+> Each is built the same way: scaffold → `./gradlew build` green → feature
+> commits → tests → CI → README. Honest history, no big&#8209;bang dumps.
 
 <!-- ────────────────────────────────────────────────────────────────────────── -->
 
