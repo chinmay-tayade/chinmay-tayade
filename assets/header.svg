@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 240" width="860" height="240" role="img" aria-label="Chinmay Tayade — Mobile Engineer. Android, Kotlin, Jetpack Compose, Kotlin Multiplatform.">
+  <title>Chinmay Tayade — Mobile Engineer</title>
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      .anim { animation: none !important; opacity: 1 !important; transform: none !important; }
+    }
+    .name   { font: 700 33px ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace; fill: #e6edf3; letter-spacing: 1.5px; }
+    .role   { font: 700 12px ui-monospace, "SF Mono", Menlo, monospace; fill: #c084fc; letter-spacing: 3.5px; }
+    .stack  { font: 400 12.5px ui-monospace, "SF Mono", Menlo, monospace; fill: #8b949e; }
+    .stack2 { font: 400 11.5px ui-monospace, "SF Mono", Menlo, monospace; fill: #6e7681; }
+    .lbl    { font: 500 10px ui-monospace, "SF Mono", Menlo, monospace; fill: #6e7681; letter-spacing: 1px; }
+    .amt    { font: 700 21px ui-monospace, "SF Mono", Menlo, monospace; fill: #e6edf3; }
+    .pillt  { font: 700 10.5px ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: 1.5px; }
+
+    .cursor    { fill: #c084fc; animation: blink 1.05s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .rule { transform: scaleX(0); transform-origin: 46px 0; animation: rule 1s cubic-bezier(.2,.7,.2,1) .15s forwards; }
+    @keyframes rule { to { transform: scaleX(1); } }
+
+    .rise { opacity: 0; transform: translateY(6px); animation: rise .7s ease forwards; }
+    .r1 { animation-delay: .35s; } .r2 { animation-delay: .5s; } .r3 { animation-delay: .65s; }
+    @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+
+    .s1, .s2, .s3 { opacity: 0; animation: cyc 6.6s infinite; }
+    .s2 { animation-delay: 2.2s; } .s3 { animation-delay: 4.4s; }
+    @keyframes cyc { 0%,2%{opacity:0} 5%,28%{opacity:1} 32%,100%{opacity:0} }
+
+    .dots circle { animation: pd 1.15s infinite; }
+    .dots circle:nth-child(2) { animation-delay: .18s; }
+    .dots circle:nth-child(3) { animation-delay: .36s; }
+    @keyframes pd { 0%,100%{opacity:.25} 50%{opacity:1} }
+
+    .check { stroke-dasharray: 22; stroke-dashoffset: 22; animation: chk .4s ease .2s forwards; }
+    @keyframes chk { to { stroke-dashoffset: 0; } }
+
+    .scan { animation: scan 5.5s linear infinite; }
+    @keyframes scan { from { transform: translateY(-18px); } to { transform: translateY(206px); } }
+  </style>
+
+  <rect x="1" y="1" width="858" height="238" rx="18" fill="#0d1117" stroke="#21262d"/>
+
+  <!-- faint column grid -->
+  <g opacity="0.5">
+    <line x1="140" y1="18" x2="140" y2="222" stroke="#161b22"/>
+    <line x1="300" y1="18" x2="300" y2="222" stroke="#161b22"/>
+    <line x1="460" y1="18" x2="460" y2="222" stroke="#161b22"/>
+  </g>
+  <g clip-path="inset(1px round 18px)">
+    <rect class="scan anim" x="1" y="0" width="858" height="14" fill="#a855f7" opacity="0.05"/>
+  </g>
+
+  <!-- left: identity -->
+  <text class="name" x="46" y="92">CHINMAY TAYADE<tspan class="cursor anim" dx="4">&#9608;</tspan></text>
+  <rect class="rule anim" x="46" y="106" width="176" height="3" rx="1.5" fill="url(#edge)"/>
+  <text class="role rise anim r1" x="48" y="134">MOBILE&#160;&#160;ENGINEER</text>
+  <text class="stack rise anim r2" x="48" y="158">Android&#160; · &#160;Kotlin&#160; · &#160;Jetpack Compose&#160; · &#160;Kotlin Multiplatform</text>
+  <text class="stack2 rise anim r3" x="48" y="178">offline-first&#160; · &#160;secure by design&#160; · &#160;shared core, native UI</text>
+
+  <!-- right: the transfer, cycling PENDING -> SYNCING -> CONFIRMED -->
+  <g transform="translate(628,40)">
+    <rect x="0" y="0" width="196" height="160" rx="16" fill="#010409" stroke="#30363d"/>
+    <text class="lbl" x="20" y="32">OUTGOING&#160;TRANSFER</text>
+    <text class="amt" x="20" y="60">&#163;240.00</text>
+
+    <g class="s1 anim">
+      <rect x="20" y="80" width="98" height="26" rx="13" fill="#3a1d00" stroke="#d29922"/>
+      <text class="pillt" x="34" y="97" fill="#d29922">PENDING</text>
+    </g>
+    <g class="s2 anim">
+      <rect x="20" y="80" width="132" height="26" rx="13" fill="#0a2a4a" stroke="#58a6ff"/>
+      <text class="pillt" x="34" y="97" fill="#58a6ff">SYNCING</text>
+      <g class="dots anim" transform="translate(112,93)">
+        <circle cx="0" cy="0" r="2.4" fill="#58a6ff"/>
+        <circle cx="8" cy="0" r="2.4" fill="#58a6ff"/>
+        <circle cx="16" cy="0" r="2.4" fill="#58a6ff"/>
+      </g>
+    </g>
+    <g class="s3 anim">
+      <rect x="20" y="80" width="132" height="26" rx="13" fill="#0d2a17" stroke="#3fb950"/>
+      <text class="pillt" x="34" y="97" fill="#3fb950">CONFIRMED</text>
+      <path class="check anim" d="M120 93 l4.5 4.5 l8 -10" stroke="#3fb950" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <text class="lbl" x="20" y="130" fill="#6e7681">idempotency key</text>
+    <text class="lbl" x="20" y="146" fill="#6e7681">optimistic UI · backoff + jitter</text>
+  </g>
+
+  <rect x="1" y="200" width="858" height="39" fill="url(#fade)" opacity="0.6"/>
+</svg>
