@@ -46,10 +46,7 @@ object Chinmay {
 The user taps **Send** with no signal. What does a serious banking client do?
 Not spin. Not lie. It persists the intent, shows the truth, and reconciles later.
 
-<details>
-<summary><b>Open the offline transfer state machine</b></summary>
-
-<br/>
+**The offline transfer state machine**
 
 ```mermaid
 stateDiagram-v2
@@ -78,16 +75,12 @@ stateDiagram-v2
 The engine lives in **[offline-sync-engine](https://github.com/chinmay-tayade/offline-sync-engine)**
 (9 tests, standalone); it gets wired into **[argent-android](https://github.com/chinmay-tayade/argent-android)** behind WorkManager.
 
-</details>
 
 <!-- ────────────────────────────────────────────────────────────────────────── -->
 
 ## &nbsp;Kotlin Multiplatform: share the logic, keep the UI native
 
-<details>
-<summary><b>Open: what I share vs. what I deliberately keep native</b></summary>
-
-<br/>
+**What I share vs. what I deliberately keep native**
 
 ```mermaid
 flowchart TD
@@ -121,7 +114,6 @@ written up in `SHARING.md`.
 
 Built in **[basis-kmp](https://github.com/chinmay-tayade/basis-kmp)** — shared domain + `SHARING.md` done, Android app runs, iOS framework links.
 
-</details>
 
 <!-- ────────────────────────────────────────────────────────────────────────── -->
 
@@ -312,10 +304,7 @@ recomposition study that shows `@Immutable` skipping on screen.
 
 <!-- ────────────────────────────────────────────────────────────────────────── -->
 
-<details>
-<summary>&nbsp;<b>GitHub activity</b></summary>
-
-<br/>
+## &nbsp;GitHub activity
 
 <div align="center">
 
@@ -324,7 +313,6 @@ recomposition study that shows `@Immutable` skipping on screen.
 
 </div>
 
-</details>
 
 <br/>
 
