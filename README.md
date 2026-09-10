@@ -308,11 +308,13 @@ recomposition study that shows `@Immutable` skipping on screen.
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=chinmay-tayade&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=a855f7&icon_color=a855f7&text_color=c9d1d9" alt="stats"/>
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=chinmay-tayade&layout=compact&hide_border=true&langs_count=8&bg_color=0d1117&title_color=a855f7&text_color=c9d1d9" alt="languages"/>
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=chinmay-tayade&theme=github_dark" alt="stats"/>
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=chinmay-tayade&theme=github_dark" alt="languages"/>
+
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=chinmay-tayade&theme=github_dark" alt="most used languages"/>
+<img width="49%" src="https://streak-stats.demolab.com?user=chinmay-tayade&hide_border=true&background=0d1117&ring=a855f7&fire=a855f7&currStreakLabel=a855f7&sideLabels=c9d1d9&dates=8b949e&sideNums=c9d1d9&currStreakNum=c9d1d9" alt="streak"/>
 
 </div>
-
 
 <br/>
 
