@@ -127,103 +127,136 @@ Built in **[basis-kmp](https://github.com/chinmay-tayade/basis-kmp)** — shared
 
 ## &nbsp;Featured work
 
-### &nbsp;&nbsp;Flagships &nbsp;·&nbsp; where most of the effort goes
+### &nbsp;&nbsp;Flagships
 
 <table>
 <tr>
-<td width="33.33%" valign="top">
+<td width="50%" valign="top">
 
-**🏦 &nbsp;[argent&#8209;android](https://github.com/chinmay-tayade/argent-android)**
-
-<sub>*Retail digital banking · offline&#8209;first*</sub>
+**🏦 &nbsp;[argent&#8209;android](https://github.com/chinmay-tayade/argent-android)** &nbsp;<sub>*retail digital banking*</sub>
 
 Multi&#8209;module Kotlin/Compose. Foundation shipped — convention plugins, a
-currency&#8209;safe domain layer with tests, Hilt&#8209;wired app, green CI.
-The offline transfer state machine is next.
+currency&#8209;safe domain layer with tests, Hilt&#8209;wired app, green CI. Next: the
+offline transfer state machine ([offline&#8209;sync&#8209;engine](https://github.com/chinmay-tayade/offline-sync-engine)
+behind WorkManager), biometric Keystore, cert pinning.
 
 <kbd>kotlin</kbd> <kbd>compose</kbd> <kbd>multi&#8209;module</kbd> <kbd>offline&#8209;first</kbd> <kbd>fintech</kbd>
 
 </td>
-<td width="33.33%" valign="top">
+<td width="50%" valign="top">
 
-**🧩 &nbsp;[basis&#8209;kmp](https://github.com/chinmay-tayade/basis-kmp)**
+**🧩 &nbsp;[basis&#8209;kmp](https://github.com/chinmay-tayade/basis-kmp)** &nbsp;<sub>*shared Kotlin core · Android + iOS*</sub>
 
-<sub>*Shared Kotlin core · Android + iOS*</sub>
-
-One financial core — portfolio valuation, cost basis, allocation — shared via
-Koin, with fully native Compose and SwiftUI UIs. Shared domain + tests done,
-Android app runs, iOS framework links. Ships **`SHARING.md`**: the
-module&#8209;by&#8209;module share&#8209;vs&#8209;native call.
+One financial core — valuation, cost basis, allocation — shared via Koin, with
+fully native Compose and SwiftUI UIs. Domain + tests done, Android app runs,
+iOS framework links. Ships **`SHARING.md`**: the module&#8209;by&#8209;module
+share&#8209;vs&#8209;native argument.
 
 <kbd>kmp</kbd> <kbd>compose</kbd> <kbd>swiftui</kbd> <kbd>koin</kbd> <kbd>ios</kbd>
 
 </td>
-<td width="33.33%" valign="top">
-
-**📒 &nbsp;[ledger&#8209;core](https://github.com/chinmay-tayade/ledger-core)**
-
-<sub>*Double&#8209;entry ledger · KMP library*</sub>
-
-Pure Kotlin: balanced journal entries, idempotent postings, a `Money` type
-with currency safety. The fintech fundamentals — 12 tests, JVM + iOS, green CI.
-
-<kbd>kmp</kbd> <kbd>fintech</kbd> <kbd>ledger</kbd> <kbd>library</kbd>
-
-</td>
 </tr>
-</table>
-
-### &nbsp;&nbsp;Also building &nbsp;·&nbsp; focused supporting repos
-
-<table>
 <tr>
 <td width="50%" valign="top">
 
-**💳 &nbsp;[pay&#8209;sheet](https://github.com/chinmay-tayade/pay-sheet)** &nbsp;<sub>*checkout / payment&#8209;sheet module*</sub>
+**🧠 &nbsp;[slate&#8209;ai](https://github.com/chinmay-tayade/slate-ai)** &nbsp;<sub>*on&#8209;device + cloud notes assistant*</sub>
 
-Card input with Luhn + brand detection, tokenization, a 3&#8209;D&#8209;Secure&#8209;style
-step&#8209;up state machine, PCI&#8209;conscious notes. 11 tests, sample app.
+A real RAG pipeline in pure Kotlin — sentence&#8209;aware chunking, embeddings,
+cosine retrieval — and a routing policy that keeps short lookups on&#8209;device
+and only escalates to the cloud when the task needs it. 12 tests, Compose app.
 
-<kbd>android</kbd> <kbd>compose</kbd> <kbd>payments</kbd> <kbd>3ds</kbd>
-
-</td>
-<td width="50%" valign="top">
-
-**🔄 &nbsp;[offline&#8209;sync&#8209;engine](https://github.com/chinmay-tayade/offline-sync-engine)** &nbsp;<sub>*standalone sync library*</sub>
-
-Durable operation queue, exponential backoff + full jitter, pluggable
-per&#8209;operation conflict strategies. 9 tests, green CI.
-
-<kbd>offline&#8209;first</kbd> <kbd>workmanager</kbd> <kbd>library</kbd>
+<kbd>on&#8209;device&#8209;ai</kbd> <kbd>litert</kbd> <kbd>rag</kbd> <kbd>compose</kbd>
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 **🏗️ &nbsp;[modulith](https://github.com/chinmay-tayade/modulith)** &nbsp;<sub>*Android architecture template*</sub>
 
-Gradle convention plugins + a `checkModuleGraph` task that fails the build on
-module&#8209;graph violations — verified catching a `core → feature` edge.
+Gradle convention plugins so a module build file is ~2 lines, plus a
+`checkModuleGraph` task that fails the build on module&#8209;graph violations —
+verified catching a `core → feature` edge.
 
-<kbd>gradle</kbd> <kbd>convention&#8209;plugins</kbd> <kbd>architecture</kbd>
-
-</td>
-<td width="50%" valign="top">
-
-**⚡ &nbsp;android&#8209;perf&#8209;lab** &nbsp;<sub>*measured performance — queued*</sub>
-
-Baseline Profiles + Macrobenchmark against argent&#8209;android — real
-before/after with device + iteration count. Sequenced after argent has real
-screens worth measuring.
-
-<kbd>performance</kbd> <kbd>baseline&#8209;profiles</kbd> <kbd>macrobenchmark</kbd>
+<kbd>gradle</kbd> <kbd>convention&#8209;plugins</kbd> <kbd>architecture</kbd> <kbd>ci</kbd>
 
 </td>
 </tr>
 </table>
 
-> Each is built the same way: scaffold → `./gradlew build` green → feature
+### &nbsp;&nbsp;Fintech libraries &amp; modules
+
+<table>
+<tr>
+<td width="33.33%" valign="top">
+
+**📒 &nbsp;[ledger&#8209;core](https://github.com/chinmay-tayade/ledger-core)** <sub>*KMP library*</sub>
+
+Double&#8209;entry ledger: balanced journal entries, idempotent postings, a
+currency&#8209;safe `Money`. 12 tests, JVM + iOS.
+
+<kbd>kmp</kbd> <kbd>ledger</kbd> <kbd>double&#8209;entry</kbd>
+
+</td>
+<td width="33.33%" valign="top">
+
+**💳 &nbsp;[pay&#8209;sheet](https://github.com/chinmay-tayade/pay-sheet)** <sub>*Compose module*</sub>
+
+Card input with Luhn + brand detection, tokenization, a 3&#8209;D&#8209;Secure&#8209;style
+step&#8209;up state machine, PCI notes. 11 tests, sample app.
+
+<kbd>compose</kbd> <kbd>payments</kbd> <kbd>3ds</kbd>
+
+</td>
+<td width="33.33%" valign="top">
+
+**🔄 &nbsp;[offline&#8209;sync&#8209;engine](https://github.com/chinmay-tayade/offline-sync-engine)** <sub>*library*</sub>
+
+Durable queue, exponential backoff + full jitter, pluggable per&#8209;operation
+conflict strategies. 9 tests.
+
+<kbd>offline&#8209;first</kbd> <kbd>workmanager</kbd>
+
+</td>
+</tr>
+</table>
+
+### &nbsp;&nbsp;Craft &amp; infrastructure
+
+<table>
+<tr>
+<td width="33.33%" valign="top">
+
+**🔐 &nbsp;[mobile&#8209;security&#8209;notes](https://github.com/chinmay-tayade/mobile-security-notes)** <sub>*lib + writeups*</sub>
+
+Keystore AES&#8209;GCM, `BiometricPrompt` + `CryptoObject`, deny&#8209;by&#8209;shape
+redaction (8 tests), cert pinning. Threat model + docs.
+
+<kbd>keystore</kbd> <kbd>biometrics</kbd> <kbd>redaction</kbd>
+
+</td>
+<td width="33.33%" valign="top">
+
+**⚡ &nbsp;[android&#8209;perf&#8209;lab](https://github.com/chinmay-tayade/android-perf-lab)** <sub>*perf infra*</sub>
+
+Baseline Profile + Macrobenchmark modules, `pixel6Api34` managed device, a
+methodology where every number carries its device + iteration count.
+
+<kbd>baseline&#8209;profiles</kbd> <kbd>macrobenchmark</kbd>
+
+</td>
+<td width="33.33%" valign="top">
+
+**🧪 &nbsp;[compose&#8209;lab](https://github.com/chinmay-tayade/compose-lab)** <sub>*experiments*</sub>
+
+A custom `Layout` with the wrapping maths unit&#8209;tested (5 tests), and a
+recomposition study that shows `@Immutable` skipping on screen.
+
+<kbd>custom&#8209;layout</kbd> <kbd>recomposition</kbd>
+
+</td>
+</tr>
+</table>
+
+> Each repo is built the same way: scaffold → `./gradlew build` green → feature
 > commits → tests → CI → README. Honest history, no big&#8209;bang dumps.
 
 <!-- ────────────────────────────────────────────────────────────────────────── -->
