@@ -6,7 +6,7 @@ I build production-grade mobile systems: offline-first architecture, secure
 storage, multi-module scale, and shared Kotlin cores across Android and iOS.
 IIIT Allahabad.
 
-[LinkedIn](https://www.linkedin.com/in/chinmay-tayade) · chinmaytayade@outlook.com
+[LinkedIn](https://www.linkedin.com/in/chinmaytayade) · chinmaytayade@outlook.com
 
 ---
 
