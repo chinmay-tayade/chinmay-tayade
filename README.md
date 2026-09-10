@@ -139,13 +139,14 @@ Built in **basis-kmp** *(next up)*.
 
 </td><td valign="top">
 
-Multi-module Kotlin/Compose retail banking app — accounts, transfers, cards,
-statements. Offline transfer state machine, biometric-gated Keystore encryption,
-certificate pinning, Baseline Profiles, full CI. Runs against an in-repo mock server.
+Multi-module Kotlin/Compose retail banking app. Foundation shipped —
+convention plugins, a currency-safe domain layer with tests, Hilt-wired app,
+green CI. Building toward the offline transfer state machine, biometric
+Keystore encryption, cert pinning and Baseline Profiles ([roadmap](https://github.com/chinmay-tayade/argent-android/blob/main/ROADMAP.md)).
 
 <sub>`kotlin` `compose` `multi-module` `offline-first` `mvi` `fintech` `mobile-security`</sub>
 
-</td><td valign="top"><br/>🟢 in progress</td></tr>
+</td><td valign="top"><br/>🟢 building</td></tr>
 
 <tr><td valign="top">
 
