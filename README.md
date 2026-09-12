@@ -14,6 +14,14 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1400&color=A855F7&center=true&vCenter=true&width=740&lines=I+design+for+the+failure+case+first.;Offline-first+sync+%E2%80%94+what+happens+with+no+signal%3F;KMP+%E2%80%94+share+the+logic%2C+keep+the+UI+native.;Secure+by+design+%E2%80%94+Keystore%2C+biometrics%2C+pinning.;Measure+before+claiming+a+win." alt="Positioning" />
 
+<br/>
+
+<p>
+  <a href="https://chinmay-tayade-portfolio.vercel.app"><img src="https://img.shields.io/badge/Portfolio-A855F7?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/></a>&nbsp;
+  <a href="https://chinmay-tayade-portfolio.vercel.app/wiki"><img src="https://img.shields.io/badge/Android_Wiki-0F9C8C?style=for-the-badge&logo=android&logoColor=white" alt="Android Wiki"/></a>&nbsp;
+  <a href="https://chinmay-tayade-portfolio.vercel.app/resume"><img src="https://img.shields.io/badge/R%C3%A9sum%C3%A9-B5481F?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Résumé"/></a>
+</p>
+
 </div>
 
 <!-- ────────────────────────────────────────────────────────────────────────── -->
@@ -250,6 +258,23 @@ recomposition study that shows `@Immutable` skipping on screen.
 
 > Each repo is built the same way: scaffold → `./gradlew build` green → feature
 > commits → tests → CI → README. Honest history, no big&#8209;bang dumps.
+
+<!-- ────────────────────────────────────────────────────────────────────────── -->
+
+## &nbsp;Learn Android — the wiki
+
+A wiki for becoming an Android engineer, from zero to shipping on the Play Store.
+Each stage is a written note paired with a repo that runs. Start at the
+[wiki](https://chinmay-tayade-portfolio.vercel.app/wiki) or follow the
+[learning path](https://chinmay-tayade-portfolio.vercel.app/learn) in order.
+
+| Stage | Repo | One line |
+|---|---|---|
+| 🌀 Coroutines | [Learn-Kotlin-Coroutines](https://github.com/chinmay-tayade/Learn-Kotlin-Coroutines) | network, Room, timeouts, error handling — the hard 20% |
+| 🌊 Flow | [Learn-Kotlin-Flow](https://github.com/chinmay-tayade/Learn-Kotlin-Flow) | operators, search, retry, backpressure |
+| 🏛️ MVVM | [MVVM-Architecture-Android](https://github.com/chinmay-tayade/MVVM-Architecture-Android) | Kotlin + Hilt + Retrofit + Coroutines + StateFlow |
+| 🗺️ Roadmap | [android-developer-roadmap](https://github.com/chinmay-tayade/android-developer-roadmap) | nine stages, fundamentals → shipping |
+| ☕ Java → Kotlin | [from-java-to-kotlin](https://github.com/chinmay-tayade/from-java-to-kotlin) | every concept side by side, with the why |
 
 <!-- ────────────────────────────────────────────────────────────────────────── -->
 
