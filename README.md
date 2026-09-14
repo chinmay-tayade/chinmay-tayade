@@ -180,6 +180,29 @@ verified catching a `core → feature` edge.
 
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top">
+
+**📡 &nbsp;[argent&#8209;track&#8209;sdk](https://github.com/chinmay-tayade/argent-track-sdk)** &nbsp;<sub>*KMP analytics &amp; attribution SDK*</sub>
+
+A self&#8209;contained KMP SDK replacing CleverTap + AppsFlyer — durable event
+queue, push/in&#8209;app campaigns, install attribution, and a client&#8209;side
+PII denylist. Android + iOS from one codebase.
+
+<kbd>kmp</kbd> <kbd>analytics</kbd> <kbd>attribution</kbd> <kbd>sdk</kbd>
+
+</td>
+<td width="50%" valign="top">
+
+**📱 &nbsp;[argent&#8209;ios](https://github.com/chinmay-tayade/argent-ios)** &nbsp;<sub>*native Swift · MVVM*</sub>
+
+SIP/investment, KYC, bank&#8209;account &amp; mandate flows with a generic
+token&#8209;refreshing network layer. UIKit + SwiftUI.
+
+<kbd>swift</kbd> <kbd>mvvm</kbd> <kbd>fintech</kbd> <kbd>ios</kbd>
+
+</td>
+</tr>
 </table>
 
 ### &nbsp;&nbsp;Fintech libraries &amp; modules
@@ -251,6 +274,18 @@ A custom `Layout` with the wrapping maths unit&#8209;tested (5 tests), and a
 recomposition study that shows `@Immutable` skipping on screen.
 
 <kbd>custom&#8209;layout</kbd> <kbd>recomposition</kbd>
+
+</td>
+</tr>
+<tr>
+<td colspan="3" valign="top">
+
+**🤖 &nbsp;[argent&#8209;rag](https://github.com/chinmay-tayade/argent-rag)** &nbsp;<sub>*bilingual RAG backend*</sub>
+
+FastAPI + ChromaDB + MongoDB + Gemini. Language&#8209;detecting retrieval, grounded
+generation, multimodal image queries — English + Hindi collections.
+
+<kbd>python</kbd> <kbd>fastapi</kbd> <kbd>rag</kbd> <kbd>gemini</kbd> <kbd>chromadb</kbd>
 
 </td>
 </tr>
