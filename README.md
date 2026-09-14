@@ -302,6 +302,20 @@ Refresh&#8209;on&#8209;401 with careful failure classification — 401/403 force
 
 </td>
 </tr>
+<tr>
+<td colspan="3" valign="top">
+
+**🧭 &nbsp;[argent&#8209;checkout](https://github.com/chinmay-tayade/argent-checkout)** &nbsp;<sub>*MVI checkout state machine*</sub>
+
+Pure&#8209;Kotlin payment&#8209;checkout state machine — three reducers driving every
+UPI flow. A `when(checkoutType)` scattered across 50+ places collapses into one
+`CheckoutTypeConfigFactory`; the reducer re&#8209;derives SIP bank&#8209;switches from the
+selected bank's mandates. 9 tests, no Android/Compose deps.
+
+<kbd>kotlin</kbd> <kbd>mvi</kbd> <kbd>state&#8209;machine</kbd>
+
+</td>
+</tr>
 </table>
 
 > Each repo is built the same way: scaffold → `./gradlew build` green → feature
