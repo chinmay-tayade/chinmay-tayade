@@ -316,6 +316,20 @@ selected bank's mandates. 9 tests, no Android/Compose deps.
 
 </td>
 </tr>
+<tr>
+<td colspan="3" valign="top">
+
+**📉 &nbsp;[argent&#8209;risk&#8209;engine](https://github.com/chinmay-tayade/argent-risk-engine)** &nbsp;<sub>*credit-underwriting policy core*</sub>
+
+Pure&#8209;Python loan&#8209;amount policy — SMS&#8209;income waterfall, bureau servicing
+history, risk segmentation and a FOIR cap combine into a pre&#8209;approved amount.
+Decile&#8209;direction is declared per model so ascending and descending scorecards
+can't silently invert each other's risk bands. 26 tests, zero I/O.
+
+<kbd>python</kbd> <kbd>credit&#8209;risk</kbd> <kbd>decision&#8209;engine</kbd>
+
+</td>
+</tr>
 </table>
 
 > Each repo is built the same way: scaffold → `./gradlew build` green → feature
