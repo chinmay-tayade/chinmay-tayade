@@ -289,6 +289,19 @@ generation, multimodal image queries — English + Hindi collections.
 
 </td>
 </tr>
+<tr>
+<td colspan="3" valign="top">
+
+**🔁 &nbsp;[argent&#8209;http&#8209;core](https://github.com/chinmay-tayade/argent-http-core)** &nbsp;<sub>*Ktor client factory*</sub>
+
+Refresh&#8209;on&#8209;401 with careful failure classification — 401/403 force logout,
+5xx/network keep the session. Optional&#8209;bearer auth, pure unit&#8209;tested
+`decideRefresh`. 9 tests.
+
+<kbd>ktor</kbd> <kbd>token&#8209;refresh</kbd> <kbd>auth</kbd>
+
+</td>
+</tr>
 </table>
 
 > Each repo is built the same way: scaffold → `./gradlew build` green → feature
